@@ -1,0 +1,7 @@
+// SassScript
+// SassScript is a script which allows us to compute CSS selector, property or value using Sass expression. We'll look at expressions in this chapter and explore data types, SassScript control directives, operations and functions in the next few chapters. All of these can be use in SassScript.
+$text-size: 25px;
+
+p {
+  font-size: $text-size * 1.2;
+}

@@ -1,0 +1,8 @@
+// 1. Parent
+.alert {
+  // The parent selector can be used to add pseudo-classes to the outer
+  // selector.
+  &:hover {
+    font-weight: bold;
+  }
+}

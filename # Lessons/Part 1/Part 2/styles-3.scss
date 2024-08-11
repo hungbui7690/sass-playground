@@ -1,0 +1,16 @@
+// Sass - Data Types
+// SassScript includes seven different data types: numbers, strings, colors, Booleans, null, lists & maps. We'll look at the details and peculiarities of each below.
+
+p {
+  // "plain" numbers added together
+  font-size: 10 + 3;
+
+  // "plain" number added to a pixel value
+  font-size: 10px + 3;
+
+  // two "em" values added together
+  font-size: 10em + 3em;
+
+  // error because pixels and ems are not compatible.
+  // font-size: 10px + 2em;
+}

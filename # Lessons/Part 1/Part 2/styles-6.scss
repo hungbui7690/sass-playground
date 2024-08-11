@@ -1,0 +1,15 @@
+// Map
+// 1. In SassScript, maps are key-value pairs. Their syntax is slightly different from a list: They must be comma-separated, and the entire map must be wrapped in parentheses:
+$red-map: (
+  light: #e57373,
+  medium: #f44336,
+  dark: #b71c1c,
+);
+
+// 2. Maps are never output directly to the CSS; it wouldn't know what to do with them. Instead, you'll use the map functions to retrieve values.
+p {
+  color: map-get($red-map, light);
+}
+
+// 3. Booleans & Nulls
+// SassScript supports two Boolean values, true and false, as well as the null value, null. These have no direct meaning in CSS, but they're useful in combination with the control directives discussed in the next chapter.

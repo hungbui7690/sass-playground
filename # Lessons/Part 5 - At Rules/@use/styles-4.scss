@@ -1,0 +1,11 @@
+/*
+  You can even load a module without a namespace by writing @use "<url>" as *. We recommend you only do this for stylesheets written by you, though; otherwise, they may introduce new members that cause name conflicts!
+
+*/
+
+@use './src/corners' as *;
+
+.button {
+  @include rounded;
+  padding: 5px + $radius;
+}

@@ -1,0 +1,30 @@
+/*
+  Shadowing
+  - Local variables can even be declared with the same name as a global variable. If this happens, there are actually two different variables with the same name: one local and one global. This helps ensure that an author writing a local variable doesn’t accidentally change the value of a global variable they aren’t even aware of.
+
+*/
+
+$variable: global value;
+
+.content {
+  $variable: local value;
+  value: $variable;
+}
+
+.sidebar {
+  value: $variable;
+}
+
+// If you need to set a global variable’s value from within a local scope (such as in a mixin), you can use the !global flag. A variable declaration flagged as !global will always assign to the global scope.
+$variableX: first global value;
+
+.content {
+  $variableX: second global value !global;
+  value: $variableX;
+}
+
+.sidebar {
+  value: $variableX;
+}
+
+// The !global flag may only be used to set a variable that has already been declared at the top level of a file. It may not be used to declare a new variable.

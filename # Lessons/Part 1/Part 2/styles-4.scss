@@ -1,0 +1,14 @@
+// String
+// You can create strings in SassScript with double quotes "string", single quotes 'string', or no quotes at all, string. In general, whatever form you use will be passed on to the CSS directly.
+
+$default-font: 'Lucida';
+
+p {
+  font-family: $default-font, 'Ariel', sans-serif;
+}
+
+$class-name: 'foo';
+
+a.#{$class-name} {
+  color: blue;
+}

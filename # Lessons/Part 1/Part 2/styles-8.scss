@@ -1,0 +1,10 @@
+// Color Operations
+// SassScript allows you to perform arithmetic between two colors or between a color and a numeric value. Because of the way RGB color works, these operations are rarely useful, but it's nice to know they're available if you should ever need them. (As we'll see in the next chapter, SassScript provides color functions that are much more straightforward to use.)
+// When performing arithmetic on two color values, Sass separates each color into its red, green and blue components and then performs on each color separately. Let's look at an example. Given the following expression:
+// #102030 + #010203
+
+// Sass does essentially the same thing when you perform an operation on a color and a number: The operation is performed on each color component individually. Thus given the expression #101010 * 2 the result would be #202020.
+
+// The examples here use hex format for the colors, but you can also use rgb, rgba, hsl and hsla. There is one caveat: If the color format you use includes an alpha value (rgba or hsla), the alpha values must be the same, and they won't be included in the calculation:
+// rgba(55, 160, 0, .5) + rgba(10, 0, 0, .5); //rgba(65, 160, 0, 0.5)
+// rgba(55, 160, 0, .5) + rgba(10, 0, 0, 1);  //syntax error

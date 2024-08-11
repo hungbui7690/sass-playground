@@ -1,0 +1,29 @@
+/*
+  Sass Variable
+  - Sass variables are simple: you assign a value to a name that begins with $, and then you can refer to that name instead of the value itself. But despite their simplicity, they’re one of the most useful tools Sass brings to the table. Variables make it possible to reduce repetition, do complex math, configure libraries, and much more.
+
+  - A variable declaration looks a lot like a property declaration: it’s written <variable>: <expression>. Unlike a property, which can only be declared in a style rule or at-rule, variables can be declared anywhere you want. To use a variable, just include it in a value.
+
+*/
+
+$base-color: #c6538c;
+$border-dark: rgba($base-color, 0.88);
+
+.alert {
+  border: 1px solid $border-dark;
+}
+
+/*
+  ⚠️ Heads up!
+  - CSS has variables of its own, which are totally different than Sass variables. Know the differences!
+
+  - Sass variables are all compiled away by Sass. CSS variables are included in the CSS output.
+
+  - CSS variables can have different values for different elements, but Sass variables only have one value at a time.
+
+  - Sass variables are imperative, which means if you use a variable and then change its value, the earlier use will stay the same. CSS variables are declarative, which means if you change the value, it’ll affect both earlier uses and later uses.
+
+
+  💡 Fun fact:
+  - Sass variables, like all Sass identifiers, treat hyphens and underscores as identical. This means that $font-size and $font_size both refer to the same variable. This is a historical holdover from the very early days of Sass, when it only allowed underscores in identifier names. Once Sass added support for hyphens to match CSS’s syntax, the two were made equivalent to make migration easier.
+*/

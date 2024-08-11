@@ -1,0 +1,29 @@
+// Sass Functions
+
+// You can use standard CSS function syntax to call Sass functions:
+p {
+  color: rgb(42, 154, 179);
+}
+
+a {
+  color: rgb($red: 42, $blue: 154, $green: 179);
+}
+
+#argument {
+  color: rgb($red: 42, $green: 179, $blue: 154);
+}
+
+#variable {
+  $red: 42;
+  color: rgb($red: $red, $green: 179, $blue: 154);
+}
+
+/*
+  - Naming your arguments requires a bit more typing, but it does make your intentions clear, and it eliminates the need to memorize (or look up) the order of parameters.
+
+  - All the function definitions always use the parameter names in this Sass tutorials, do given the declaration str-insert($string, $insert, $index).
+
+  - The named parameters (which can be specified in any order) are $string, $insert and $index: str-insert($insert: "hello, ", $string: "world", $index: 1) would return "hello, world".
+
+  - Sass include various function for string, numeric, list, map, selector and introspection. We will see all these functions in the next few chapters.
+*/

@@ -1,0 +1,18 @@
+// 1. Sass Variable
+$large-font: 50px;
+
+p {
+  font-size: $large-font;
+}
+
+// 2. Scope -> Like any modern programming language, Sass variables support the concept of scope: Variables are only available at the level of nesting where they're defined.
+$main-color: red;
+
+p {
+  $main-color: blue;
+  color: $main-color;
+}
+a {
+  color: $main-color;
+}
+// In this code, the text inside the <a> tag will be blue. But the !global switch, like it's siblings !important and !default, have side-effects that can be hard to predict or track down, so use them with care. As a general rule, if you want a variable to be global, define it outside any rules. Best practice is to define all your global variables in a single file, named _globals.scss by convention, and include it using @include anywhere it's needed.

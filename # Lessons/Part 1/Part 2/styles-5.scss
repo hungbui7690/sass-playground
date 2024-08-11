@@ -1,0 +1,22 @@
+/*
+  Color
+  - SassScript supports the same color expressions that are supported by CSS: hex values such as #0000, named values such as red, rgb expressions like rgb(100, 39, 153), rgba expressions such as rgba(100, 39, 153, 75), hsl expressions such as hsl(0, 30%, 100%), and hsla expressions such as hsla(0, 30%, 100%, 0.3).
+
+*/
+
+// List
+// A SassScript list is a series of values separated by either spaces or commas. The contents of both of the following variables will be treated as lists by SassScript:
+$body-font: Helvetica, Arial, sans-serif;
+$body-margin: 0 0 10px 15px;
+
+// Lists don't have to contain simple values; they can contain other lists:
+$random-list: 10, 10 0, 3;
+
+// Best practice to wrap nested lists in parentheses:
+$random-list: 10, (10 0), 3;
+
+// This syntax makes it clear that the second item is a nested list. You can also use parentheses as placeholders for an entire list or for individual elements:
+$empty-list: ();
+$missing-list: 10px () 30px 0;
+
+// Since CSS doesn't understand them, the Sass transpiler will strip the parentheses from the CSS it outputs. This can lead to some unexpected side-effects if you're not careful. For example, $missing-list in the example above would be output as 10px 30px 0, which probably isn't what you wanted.
