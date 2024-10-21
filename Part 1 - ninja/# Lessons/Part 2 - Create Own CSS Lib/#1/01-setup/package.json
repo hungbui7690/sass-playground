@@ -1,0 +1,15 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "sass": "sass scss/index.scss:css/index.css --watch --update --style=expanded"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.80.3"
+  }
+}
